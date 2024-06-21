@@ -1,5 +1,6 @@
 # Eşzamanlı ve Çok kanallı TCP&UDP tabanlı İstemciler ve Sunucu içerikli Mesaj Odası Uygulaması 
 Message Room Application with Concurrent and Multi-channel TCP UDP based Clients and Server
+
 1.Programda önce sunucu (server) kısmı çalıştırılacak, sunucu kısmı tüm soketlerden gelebilecek TCP ve UDP mesajlarını dinleyecek ve bağlı tüm istemcilere iletecektir. Sunucunun eşzamanlı (concurrent) bir nitelikte olması beklenmektedir bu noktada her bir client talebi için yeni bir iş parçacığının oluşturulması gerekir. Server hem TCP hem de UDP iletişimi kullanan multithreaded bir yapıda olmalıdır.  Yani sunucu Gelen TCP bağlantılarını ve mesajlarını işler, TCP kullanıcı adı doğrulaması yapar, Gelen UDP mesajlarını işler ve kullanıcı adı doğrulamasını yapar. Kullanıcı bağlantıları ve ayrıca tüm TCP ve UDP istemcilere ait mesajları sunucu konsolunda görüntüler. TCP bağlantılarını ve UDP isteklerini dikkate alır ve yeni iş parçacıklarının atamasını yapar. 
 
 2. Her bir İstemci (client) kodu çalıştırıldığında sunucuya yeni bir bağlantı gerçekleştirecektir. İstemciler TCP istemciler ve UDP istemciler olmak üzere iki çeşit olacaktır.  
