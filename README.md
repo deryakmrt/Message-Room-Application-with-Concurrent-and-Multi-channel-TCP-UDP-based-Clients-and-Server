@@ -9,4 +9,4 @@ Message Room Application with Concurrent and Multi-channel TCP UDP based Clients
 User1[TCP] : Merhaba  
 User2[UDP] : Selam Gençler  
 User2[UDP] : Görüşürüz   
-7. Bir kullanıcı sohbet odasından ayrıldığında server tarafından bu bilgi sohbet odasında paylaşılmalıdır. TCP bağlantısında bu protokol gereği bağlantının close edilmesi ile belirlenebilir. UDP tarafında ise bir kullanıcı ayrılması gerektiğinde “görüşürüz” mesajını göndererek ayrılmalıdır. Bu sayede server ilgili UDP istemcinin kullanıcı adını listeden silebilecektir. Eğer UDP kullancısı mesaj göndermeden ayrılırsa ve tekrar bağlanmaya çalışırsa aynı kullanıcı ismi ile buna izin verilmemelidir. 
+7. Bir kullanıcı sohbet odasından ayrıldığında server tarafından bu bilgi sohbet odasında paylaşılmalıdır. TCP bağlantısında bu protokol gereği bağlantının close edilmesi ile belirlenebilir. UDP tarafında ise bir kullanıcı ayrılması gerektiğinde “görüşürüz” mesajını göndererek ayrılmalıdır. Bu sayede server ilgili UDP istemcinin kullanıcı adını listeden silebilecektir. Eğer UDP kullancısı mesaj göndermeden ayrılırsa ve tekrar bağlanmaya çalışırsa aynı kullanıcı ismi ile buna izin verilmemelidir.
