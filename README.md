@@ -1,3 +1,55 @@
+# Message Room Application with Concurrent and Multi-channel TCP & UDP Clients and Server
+
+## Overview
+This project is a Message Room Application that supports concurrent and multi-channel communication using both TCP and UDP protocols. It involves creating a server that listens for and handles incoming messages from multiple clients simultaneously, and clients that can connect to the server using either TCP or UDP.
+
+## Features
+- **Concurrent Server**: The server is designed to handle multiple clients concurrently, creating a new thread for each client request.
+- **Multi-channel Communication**: Supports both TCP and UDP communication, processing incoming TCP connections and UDP messages.
+- **User Authentication**: Validates user names for both TCP and UDP clients to ensure uniqueness within the chat room.
+- **Real-time Messaging**: Broadcasts messages from any client to all other connected clients, displaying the sender's username and protocol.
+- **User Notifications**: Informs all clients when a new user joins or leaves the chat room.
+
+## How to Run
+
+### Server
+1. Start the server by running the server script.
+   ```bash
+   python server.py
+2. The server will listen for both TCP and UDP messages, process them, and relay them to all connected clients.
+
+### Clients
+1. Start a TCP or UDP client by running the respective client script.
+   ```bash
+    # For TCP client
+    python tcp_client.py
+
+    # For UDP client
+    python udp_client.py
+2. When a client connects, it will prompt for a username. The username must be unique within the chat room.
+3. If the username is already taken, the client will be asked to enter a different username.
+### Messaging
+Clients can send messages to the server, which will broadcast the message to all connected clients.  
+Messages will be displayed with the sender's username and the protocol used (TCP/UDP).
+### Notifications
+When a new client joins, the server will notify all clients with the new user's username and protocol.
+- Server: User1 [UDP] has connected. Welcome!  
+- Client: Welcome User1, you are connected via UDP.
+
+When a client leaves, the server will notify all clients that the user has left the chat room.  
+- Example: User1 [TCP] has left the chat.
+
+### Example Messages  
+User1[TCP] : Hello  
+User2[UDP] : Hi everyone  
+User2[UDP] : Goodbye  
+### Exiting
+- TCP clients can disconnect by closing the connection.
+- UDP clients should send a "goodbye" message to notify the server before disconnecting.
+
+
+=============================================================================
+
 # Eşzamanlı ve Çok kanallı TCP&UDP tabanlı İstemciler ve Sunucu içerikli Mesaj Odası Uygulaması 
 Message Room Application with Concurrent and Multi-channel TCP UDP based Clients and Server
 
